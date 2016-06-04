@@ -16,6 +16,8 @@
 // São criados segurando CTRL e arrastando do StoryBoard até o código.
 @property (weak, nonatomic) IBOutlet UIButton *card;
 @property (weak, nonatomic) IBOutlet UILabel *flipsCounter;
+@property (weak, nonatomic) IBOutlet UILabel *score;
+@property (weak, nonatomic) IBOutlet UIButton *card2;
 
 // Actions para eventos do StoryBoard
 // Também criados segurando CTRL e arrastando do StoryBoard até o código.
@@ -24,7 +26,7 @@
 /**
  * EXERCÍCIOS
  *
- * 1) Fazer o flip da carta mostrar cartas aleatórias a cada flip da frente da carta.
+ * 1) Fazer o flip da carta mostrar cartas aleatórias a cada flip da frente da carta. ✔️
  *
  * 2) Incluir mais uma carta no StoryBoard. Iniciar o app com as cartas viradas para baixo.
  *    Ao virar cada carta, um valor aleatório é exibido. 

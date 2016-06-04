@@ -44,6 +44,27 @@
     [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
     [sender setTitle:cardText forState:UIControlStateNormal];
     
+    if (_card.currentTitle && _card2.currentTitle) {
+        NSString *rank1 = [_card.currentTitle substringToIndex:1];
+        NSString *suit1 = [_card.currentTitle substringFromIndex:1];
+        
+        NSString *rank2 = [_card2.currentTitle substringToIndex:1];
+        NSString *suit2 = [_card2.currentTitle substringFromIndex:1];
+        
+        NSInteger score = 0;
+        if ([rank1 isEqualToString:rank2]) {
+            score += 2;
+        }
+        
+        if ([suit1 isEqualToString:suit2]) {
+            score += 1;
+        }
+    
+        self.score.text = [NSString stringWithFormat:@"Score: %d", score];
+    } else {
+        self.score.text = @"Turn the card!";
+    }
+    
     self.flipsCount++;
 }
 
