@@ -69,7 +69,7 @@
 
 - (BOOL)shouldPickCard:(Card *)card
 {
-    return ![self.scoredCards containsObject:card];
+    return ![self.scoredCards containsObject:card] && card != self.firstCard;
 }
 
 - (Card *)cardAtIndex:(NSUInteger)index
