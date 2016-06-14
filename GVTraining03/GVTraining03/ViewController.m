@@ -77,4 +77,14 @@
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %@", score];
 }
 
+-(void)disableCard1:(Card *)card1 andCard2:(Card *)card2
+{
+    UIButton *cardButton1 = [self.cardButtons objectAtIndex:[self.game indexOfCard:card1]];
+    UIButton *cardButton2 = [self.cardButtons objectAtIndex:[self.game indexOfCard:card2]];
+    
+    [cardButton1 setEnabled:NO];
+    [cardButton2 setEnabled:NO];
+}
+
+
 @end

@@ -18,6 +18,7 @@
 - (void)showCard:(Card *)card;
 - (void)hideCard:(Card *)card;
 - (void)showScore:(NSNumber *)score;
+- (void)disableCard1:(Card *) card1 andCard2:(Card *)card2;
 @end
 
 @interface ConcentrationGame : NSObject

@@ -56,6 +56,7 @@
         if (score > 0) {
             [self.scoredCards addObject:card];
             [self.scoredCards addObject:self.firstCard];
+            [self.delegate disableCard1:self.firstCard andCard2:card];
         }
         else {
             [self.delegate hideCard:card];
