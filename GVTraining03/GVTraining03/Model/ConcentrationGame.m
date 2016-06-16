@@ -51,9 +51,10 @@
         [self.delegate showCard:card];
         
         NSInteger score = [self.firstCard matchCard:card];
-        self.score = @(self.score.integerValue + score);
+        
         
         if (score > 0) {
+            self.score = @(self.score.integerValue + [self.firstCard calculateScore:card]);
             [self.scoredCards addObject:card];
             [self.scoredCards addObject:self.firstCard];
             [self.delegate disableCard1:self.firstCard andCard2:card];

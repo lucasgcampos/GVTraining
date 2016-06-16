@@ -52,6 +52,11 @@
 
 - (void)showCard:(Card *)card
 {
+    if (!card.count) {
+        card.count = 1;
+    } else {
+        card.count += 1;
+    }
     UIButton *cardButton = [self.cardButtons objectAtIndex:[self.game indexOfCard:card]];
     
     [UIView transitionWithView:cardButton duration:0.3 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{

@@ -35,6 +35,22 @@
     return totalScore;
 }
 
+-(NSInteger)calculateScore:(Card *)card
+{
+    NSInteger clicks = self.count + card.count;
+    
+    if (clicks < 3) {
+        return 10;
+    } else if (clicks < 4) {
+        return 8;
+    } else if (clicks < 5) {
+        return 5;
+    } else {
+        return -1;
+    }
+    
+}
+
 #pragma mark <NSCopying>
 
 // Para o protocolo <NSCopying>, necessário implementar este método.

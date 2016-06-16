@@ -12,8 +12,10 @@
 @interface Card : NSObject <NSCopying>
 
 @property (nonatomic, strong) NSString *contents;
+@property (nonatomic, assign) NSInteger count;
 
 - (NSUInteger)matchCard:(Card *)card;
 - (NSUInteger)matchCards:(NSArray<Card *> *)cards;
+- (NSInteger)calculateScore:(Card *)card;
 
 @end
