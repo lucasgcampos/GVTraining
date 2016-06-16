@@ -34,6 +34,8 @@
             
             // Adicionamos uma cópia para que sejam instâncias diferentes na memória.
             [self.cards addObject:[card copy]];
+            [self shuffle: self.cards];
+            
         }
         
     }
@@ -82,6 +84,16 @@
 - (NSUInteger)indexOfCard:(Card *)card
 {
     return [self.cards indexOfObject:card];
+}
+
+-(void)shuffle:(NSMutableArray<Card *> *)cards
+{
+    NSInteger count = [cards count];
+    for (NSInteger i = 0; i < count - 1; ++i) {
+        NSInteger range = count - i;
+        NSInteger index = i + arc4random_uniform((u_int32_t) range);
+        [cards exchangeObjectAtIndex:i withObjectAtIndex:index];
+    }
 }
 
 @end

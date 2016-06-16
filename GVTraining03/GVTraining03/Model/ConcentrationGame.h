@@ -37,5 +37,6 @@
 - (BOOL)shouldPickCard:(Card *)card;
 - (Card *)cardAtIndex:(NSUInteger)index;
 - (NSUInteger)indexOfCard:(Card *)card;
+- (void)shuffle:(NSMutableArray<Card *> *)cards;
 
 @end
