@@ -43,15 +43,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailCell"];
     
-    
     cell.textLabel.text = [self.keys objectAtIndex:indexPath.row];
-//    cell.detailTextLabel.text = ;
-    
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", self.selected[[self.keys objectAtIndex:indexPath.row]]];
     
-//    if ([self.selected[[self.keys objectAtIndex:indexPath.row]] isKindOfClass:[NSString class]]) {
-//        cell.detailTextLabel.text = self.selected[[self.keys objectAtIndex:indexPath.row]]?:@"";
-//    }
     return cell;
 }
 
